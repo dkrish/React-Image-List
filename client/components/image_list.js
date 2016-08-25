@@ -13,9 +13,9 @@ const IMAGES = [
 
 const ImageList = () => {
 
-  const RenderedImages = IMAGES.map(function(image) {
-    return <ImageDetail image={image} />
-  });
+  const RenderedImages = IMAGES.map(image =>
+     <ImageDetail key={image.title} image={image} />
+  );
 
   return (
     <ul className="media-list list-group">
